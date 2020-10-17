@@ -13,9 +13,10 @@ def convert(filename):
     ret = pd.melt(ret)
     ret = ret.drop(columns=['variable'])
     ret = ret.dropna()
-    ret.to_csv('new.csv')
+    print(ret)
+    ret.to_csv('plastic-new.csv')
 
 
 
 if __name__ == "__main__":
-    convert('week7.csv')
+    convert('plastic.csv')
